@@ -1,6 +1,4 @@
-'use strict';
 
-module.exports = (err, req, res, next) => {
-    res.status(404).json({ error: 'Not Found!' });
-
+module.exports = (req, res, next) => {
+    res.status(404).json({ error: 'Not Found.' });
 };
