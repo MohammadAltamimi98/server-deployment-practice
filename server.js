@@ -7,12 +7,12 @@ const errorHandler = require('./error-handlers/500');
 
 
 app.get('/', (req, res) => {
-    res.status(300).send('Hello World !');
+  res.status(200).send('Hello World !');
 });
 
 
 app.get('/bad', (req, res) => {
-    throw new Error('Something went wrong!');
+  throw new Error('Something went wrong!');
 });
 
 
@@ -23,12 +23,12 @@ app.use(errorHandler); // this has to be the last line
 
 
 function start(port) {
-    app.listen(port, () => console.log(`This server is up and running on port ${port}`));
+  app.listen(port, () => console.log(`This server is up and running on port ${port}`));
 }
 
 module.exports = {
-    app: app,
-    start: start,
+  app: app,
+  start: start,
 };
 
 
