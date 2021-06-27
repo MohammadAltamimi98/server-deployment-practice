@@ -6,8 +6,8 @@ const notFoundHandler = require('./error-handlers/404');
 const errorHandler = require('./error-handlers/500');
 
 
-app.get('/', (req, res) => {
-  res.status(200).send('Hello World !');
+app.get('/data', (req, res) => {
+  res.status(200).send('Hello World ! This server is visible.');
 });
 
 
